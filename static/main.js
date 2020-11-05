@@ -1,3 +1,7 @@
+$("#lastUpdatedEat").text("Last Updated (Nairobi Time) " + lastUpdatedEat);
+$("#lastUpdatedEst").text("Last Updated (Montreal Time) " + lastUpdatedEst);
+$("#lastUpdatedPst").text("Last Updated (Redmond Time) " + lastUpdatedPst);
+
 function prettyPrint(results)
 {
     var output = "";

@@ -15,3 +15,8 @@
 {
     margin-right: 5px;
 }
+
+.jumbotron /* override */
+{
+    padding: .5rem;
+}

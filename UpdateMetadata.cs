@@ -215,6 +215,18 @@ namespace MetadataExplorer
             sb.Remove(sb.Length - 1, 1);
             sb.AppendLine("];");
 
+            var now = DateTime.UtcNow;
+            var pst = "Pacific Standard Time";
+            var est = "Eastern Standard Time";
+            var eat = "E. Africa Standard Time";
+            var pstZone = TimeZoneInfo.FindSystemTimeZoneById(pst);
+            var estZone = TimeZoneInfo.FindSystemTimeZoneById(est);
+            var eatZone = TimeZoneInfo.FindSystemTimeZoneById(eat);
+
+            sb.AppendLine($@"const lastUpdatedPst = ""{TimeZoneInfo.ConvertTimeFromUtc(now, pstZone)}"";");
+            sb.AppendLine($@"const lastUpdatedEst = ""{TimeZoneInfo.ConvertTimeFromUtc(now, estZone)}"";");
+            sb.AppendLine($@"const lastUpdatedEat = ""{TimeZoneInfo.ConvertTimeFromUtc(now, eatZone)}"";");
+
             var storageAccount = GetCloudStorageAccount(context);
             var blobClient = storageAccount.CreateCloudBlobClient();
             var container = blobClient.GetContainerReference("$web");
