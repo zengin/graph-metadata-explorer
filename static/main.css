@@ -1,0 +1,17 @@
+.results
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: fit-content;
+}
+
+.badge
+{
+    margin:1px
+}
+
+.result-types-title
+{
+    margin-right: 5px;
+}
