@@ -125,6 +125,10 @@ function onHashChange() {
         $("#search-box").val(searchTerm);
     }
 
+    ["v1", "stagingv1", "cleanv1", "beta", "stagingbeta", "cleanbeta"].forEach(version => {
+        $("li.nav-" + version + " a").attr("href", version + ".html" + location.hash);
+    });
+
     window.scrollTo(0, 0);
 }
 
