@@ -31,7 +31,7 @@ namespace MetadataExplorer
             };
 
         [FunctionName("UpdateMetadata")]
-        public static void Run([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer, ILogger log, ExecutionContext context)
+        public static void Run([TimerTrigger("0 */30 * * * *")]TimerInfo myTimer, ILogger log, ExecutionContext context)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             foreach (KeyValuePair<string, string> metadata in metadataMap)

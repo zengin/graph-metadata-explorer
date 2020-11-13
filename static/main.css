@@ -20,3 +20,16 @@
 {
     padding: .5rem;
 }
+
+.card-body /* override */
+{
+    background: white;
+    color: black;
+    font-size: .8rem;
+    padding: 1rem;
+}
+
+.card-header /* override */
+{
+    font-size: 0.9rem;
+}
